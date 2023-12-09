@@ -1,0 +1,113 @@
+/* ComboBox Style */
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-padding: 2;
+}
+
+.combo-box:hover {
+    -fx-cursor: hand;
+}
+
+/* Arrow Button Style */
+.combo-box .arrow-button {
+    -fx-background-color: #000000;
+    -fx-background-radius: 5;
+}
+
+/* Arrow Icon Color */
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* Popup List Style */
+.combo-box .list-cell {
+    -fx-background-color: #ffffff;
+}
+
+/* Hover Effect */
+.combo-box .list-cell:hover {
+    -fx-background-color: #576a77;
+    -fx-cursor: hand;
+}
+
+/* Selected Item Style */
+.combo-box .list-cell:filled:selected {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Prompt Text Color */
+.combo-box .text-input {
+    -fx-text-fill: #333333;
+}
+
+/* Remove Focus Border */
+.combo-box:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Button Style */
+.button {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 5;
+    -fx-border-color: #2980b9;
+    -fx-border-radius: 5;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+    -fx-padding: 8 15;
+}
+
+/* Hover Effect */
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-cursor: hand;
+}
+
+/* Pressed Effect */
+.button:pressed {
+    -fx-background-color: #21618c;
+}
+
+/* Slider'ın genişliğini ve yüksekliğini ayarlar */
+.slider {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 20px;
+}
+
+.slider .thumb:pressed{
+    -fx-background-color: #347062;
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #347062;
+    -fx-cursor: hand;
+}
+
+/* Slider'ın izini ayarlar */
+.slider .track {
+    -fx-background-color: #63d3b9;
+    -fx-background-radius: 10px;
+}
+
+/* Slider'ın başparmağını ayarlar */
+.slider .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0.5, 0, 0);
+}
+
+.color-picker:hover{
+    -fx-cursor:hand;
+}
+.color-picker .arrow{
+    -fx-cursor:hand;
+}
+.color-picker :focused{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
