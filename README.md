@@ -28,7 +28,8 @@ Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geli�
 
 **Video ile Kurulum**
 
-[![Video Açıklaması](https://img.youtube.com/vi/fMriLx-Jq4s/0.jpg)](https://www.youtube.com/embed/fMriLx-Jq4s)
+<iframe width="560" height="315" src="https://your-video-hosting.com/your-video-id" frameborder="0" allowfullscreen></iframe>
+
 
 ## Kullanım
 
