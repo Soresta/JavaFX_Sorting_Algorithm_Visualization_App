@@ -1,6 +1,5 @@
 # JavaFX Sorting Algorithm Visualization App
-
-![Image](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/assets/112137968/d820b5e4-ecbd-4933-ae0f-18a06874a253)
+![Sorting Algorithms Vizulizer 9 12 2023 09_40_19](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/assets/112137968/b5dd109d-1e88-4263-a74e-e5e2c9665786)
 
 
 Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geliştirilmiş ve farklı sıralama algoritmalarını görselleştirmek amacıyla tasarlanmıştır. Uygulamayı kullanmak için aşağıdaki adımları takip edebilirsiniz.
