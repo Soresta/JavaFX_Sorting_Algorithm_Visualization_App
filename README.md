@@ -26,7 +26,7 @@ Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geli�
    - Uygulama başladığında sıralama algoritmalarını seçin, bir dizi oluşturun ve "Start" düğmesine tıklayarak görselleştirmeyi başlatın.
 
 
-**Kurulum**
+**Video ile Kurulum**
 
 [![Video Açıklaması](https://img.youtube.com/vi/fMriLx-Jq4s/0.jpg)](https://www.youtube.com/embed/fMriLx-Jq4s)
 
