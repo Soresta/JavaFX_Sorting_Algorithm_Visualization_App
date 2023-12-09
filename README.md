@@ -25,6 +25,9 @@ Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geli�
 6. Uygulamayı Kullanın
    - Uygulama başladığında sıralama algoritmalarını seçin, bir dizi oluşturun ve "Start" düğmesine tıklayarak görselleştirmeyi başlatın.
 
+[Videoyu İzlemek İçin Tıklayın](https://www.youtube.com/watch?v=fMriLx-Jq4s)
+
+
 ## Kullanım
 
 Bu uygulama, farklı sıralama algoritmalarını görselleştirmek ve kullanıcılara interaktif bir deneyim sunmak amacıyla tasarlanmıştır. Aşağıda, uygulamanın temel özelliklerini bulabilirsiniz:
