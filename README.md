@@ -43,11 +43,11 @@ Uygulama şu temel sıralama algoritmalarını içermektedir:
 
 Kullanıcılar, sıralama algoritmalarının çalışma hızını özelleştirebilirler. Hız ayarı, algoritmanın adımlarını daha yavaş veya daha hızlı bir şekilde görselleştirmelerine olanak tanır.
 
-### Barların Boyut Ayarlama
+### Barların Boyutunu Ayarlama
 
 Her bir elemanı temsil eden çubukların boyutunu ayarlamak mümkündür. Bu, kullanıcılara görselleştirmenin daha belirgin olmasını sağlar.
 
-### Bar Renk Seçimi
+### Barların Renk Seçimi
 
 Çubukların rengini özelleştirmek için kullanıcılar farklı renk seçenekleri arasından tercih yapabilirler. Bu özellik, görselleştirmeyi kişiselleştirmek için kullanışlıdır.
 
