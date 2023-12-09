@@ -5,6 +5,7 @@
 Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geliştirilmiş ve farklı sıralama algoritmalarını görselleştirmek amacıyla tasarlanmıştır. Uygulamayı kullanmak için aşağıdaki adımları takip edebilirsiniz.
 
 ## Kurulum ve Çalıştırma Adımları
+https://www.youtube.com/watch?v=fMriLx-Jq4s
 
 1. [Buraya Basarak İndirin](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/releases/tag/v1.0.0)
    - Yeni sürümü GitHub releases sayfasından indirin.
