@@ -6,7 +6,7 @@ Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geli�
 
 ## Kurulum ve Çalıştırma Adımları
 
-1. [Buraya Basarak İndirin](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/releases/download/v1.0.0/Sorting_Vizualizer.zip))
+1. [[Buraya Basarak İndirin](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/releases/download/v1.0.0/Sorting_Vizualizer.zip)](https://github.com/Soresta/JavaFX_Sorting_Algorithm_Visualization_App/releases/tag/v1.0.0)
    - Yeni sürümü GitHub releases sayfasından indirin.
 
 
