@@ -11,7 +11,7 @@ Bu masaüstü uygulaması, Java dilinde JavaFX kütüphanesi kullanılarak geli�
    - ZIP dosyasını indirin.
 
 2. JDK İndirme ve Kurulum Adımları
-   1. [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) adresinden JDK'yi indirin.
+   1. [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) adresinden windows kısmını seçin ve .exe olarak JDK'yı indirin.
    2. JDK'yi kurun ve kurulum adımlarını tamamlayın.
 
 3. İndirilen ZIP dosyasını Masaüstüne Ayıklayın
