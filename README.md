@@ -68,5 +68,3 @@ Eğer uygulamayı geliştirmek veya yeni özellikler eklemek istiyorsanız, lüt
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ---
-
-**Not:** Bu, uygulamanızın temel bir README yapısı olabilir. Siz kendi uygulamanızın özelliklerine ve gereksinimlerine göre bu temel yapıyı düzenleyebilirsiniz.
