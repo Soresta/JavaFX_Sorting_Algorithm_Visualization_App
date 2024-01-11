@@ -40,6 +40,9 @@ Uygulama şu temel sıralama algoritmalarını içermektedir:
 - **Selection Sort:** Minimum elemanı seçerek sıralama.
 - **Insertion Sort:** Elemanları sıralı bir şekilde ekleyerek sıralama.
 - **Quick Sort:** Hızlı ve etkili bir bölme-tabanlı sıralama algoritması.
+- **Shell Sort:** Shell Sort, insertion sort'un geliştirilmiş bir versiyonudur. Diziyi belirli aralıklarla karşılaştırarak sıralama işlemini gerçekleştirir. Bu aralıklar genellikle "gap" olarak adlandırılır. Shell Sort, insertion sort'un dezavantajlarını azaltmaya çalışarak performansı artırmayı hedefler.
+- **Heap Sort:** Heap Sort, bir tam sayı dizisini bir max heap veya min heap veri yapısına dönüştürerek sıralayan bir sıralama algoritmasıdır. Daha sonra heap'ten elemanları sırayla çıkararak sıralı bir dizi elde edilir. Bu algoritma, özellikle büyük veri setleri üzerinde etkili bir şekilde çalışabilir ve in-place bir sıralama algoritmasıdır.
+
 
 ### Hız Ayarlama
 
