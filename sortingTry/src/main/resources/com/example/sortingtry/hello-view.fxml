@@ -29,7 +29,7 @@
                </font>
             </Button>
             <Slider fx:id="sizeSlider" layoutX="560.0" layoutY="20.0" max="50.0" min="2.0" value="25.0" />
-            <Slider fx:id="speedSlider" layoutX="409.0" layoutY="20.0" min="1.0" prefWidth="100.0" value="100.0" />
+            <Slider fx:id="speedSlider" layoutX="409.0" layoutY="20.0" max="1000.0" min="1.0" prefWidth="100.0" value="100.0" />
             <Text fx:id="speedTxt" fill="WHITE" layoutX="348.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speed" textAlignment="CENTER" wrappingWidth="50.13067626953125">
                <font>
                   <Font name="Calibri Bold" size="18.0" />

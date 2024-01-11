@@ -15,10 +15,10 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        InputStream iconStream = HelloApplication.class.getResourceAsStream("sort.png");
 
-        Image icon1 = new Image(iconStream);
-        stage.getIcons().add(icon1);
+
+
+
         stage.setScene(scene);
         stage.setTitle("Sorting Algorithms Vizulizer");
         stage.setResizable(false);

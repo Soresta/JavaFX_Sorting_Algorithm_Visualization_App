@@ -55,7 +55,7 @@ public class HelloController implements Initializable {
     @FXML
     private ComboBox<String> sortings;
     Rectangle[] recs;
-    String[] sortingAlgorithms = {"Selection Sort", "Bubble Sort", "Quick Sort", "Insertion Sort"};
+    String[] sortingAlgorithms = {"Selection Sort", "Bubble Sort", "Quick Sort", "Insertion Sort", "Heap Sort", "Shell Sort"};
     String sort;
     boolean sorted;
     boolean changeAble;
@@ -156,6 +156,12 @@ public class HelloController implements Initializable {
                 break;
             case "Selection Sort":
                 selectionSort();
+                break;
+            case "Heap Sort":
+                heapSort();
+                break;
+            case "Shell Sort":
+                shellSort();
                 break;
         }
     }
@@ -347,7 +353,8 @@ public class HelloController implements Initializable {
                 int pivotIndex = partition(low, high);
                 quickSortHelper(low, pivotIndex - 1);
                 quickSortHelper(pivotIndex + 1, high);
-            }catch (StackOverflowError e){}
+            } catch (StackOverflowError e) {
+            }
         }
     }
 
@@ -359,7 +366,6 @@ public class HelloController implements Initializable {
             if (play) {
                 int finalJ = j;
                 int finalI = i;
-
                 Platform.runLater(() -> {
                     recs[high].setFill(Color.YELLOW);
                     recs[finalJ].setFill(selectedBarsColor);
@@ -484,6 +490,179 @@ public class HelloController implements Initializable {
                 delay(5);
             }
         });
+        currentThread.start();
+    }
+
+    public void heapSort() {
+        play = true;
+        disable(true);
+        currentThread = new Thread(() -> {
+            int n = recs.length;
+            for (int i = n / 2 - 1; i >= 0; i--) {
+                if (!play) {
+                    disable(false);
+                    return;
+                }
+                heapify(n, i);
+            }
+
+            for (int i = n - 1; i > 0; i--) {
+                if (!play) {
+                    disable(false);
+                    return;
+                }
+
+                final int finalI = i;
+                latch = new CountDownLatch(1);
+                Platform.runLater(() -> {
+                    recs[0].setFill(swapAnmColor);
+                    recs[finalI].setFill(swapAnmColor);
+                    delay(speed);
+                    ParallelTransition parel = swapAnm(recs[0], recs[finalI]);
+                    Rectangle temp = recs[0];
+                    recs[0] = recs[finalI];
+                    recs[finalI] = temp;
+                    parel.play();
+                    showReplacments.setText("Number of Position Changes:" + (++noOfReplacments));
+                    parel.setOnFinished(e -> latch.countDown());
+                });
+                try {
+                    latch.await();
+                } catch (InterruptedException ignored) {
+                }
+                delay(speed);
+                heapify(i, 0);
+            }
+
+            for (int i = 0; i < recs.length; i++) {
+                final int finalI = i;
+                Platform.runLater(() -> {
+                    recs[finalI].setFill(barsSortedColor);
+                });
+                delay(5);
+            }
+
+            disable(false);
+        });
+        currentThread.start();
+    }
+
+    private void heapify(int n, int i) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+
+        if (left < n && recs[left].getHeight() > recs[largest].getHeight()) {
+            largest = left;
+        }
+
+        if (right < n && recs[right].getHeight() > recs[largest].getHeight()) {
+            largest = right;
+        }
+
+
+        if (largest != i) {
+            final int finalLargest = largest;  // Burada largest değişkenini final olarak tanımlıyoruz
+            latch = new CountDownLatch(1);
+            Platform.runLater(() -> {
+                recs[i].setFill(Color.rgb((int) (Math.random() * 255 + 1), (int) (Math.random() * 255 + 1), (int) (Math.random() * 255 + 1)));
+                recs[finalLargest].setFill(Color.rgb((int) (Math.random() * 255 + 1), (int) (Math.random() * 255 + 1), (int) (Math.random() * 255 + 1)));
+                delay(speed);
+                ParallelTransition parel = swapAnm(recs[i], recs[finalLargest]);
+                Rectangle temp = recs[i];
+                recs[i] = recs[finalLargest];
+                recs[finalLargest] = temp;
+                parel.play();
+                showReplacments.setText("Number of Position Changes:" + (++noOfReplacments));
+                parel.setOnFinished(e -> latch.countDown());
+            });
+            try {
+                latch.await();
+            } catch (InterruptedException ignored) {
+            }
+            delay(speed);
+
+            heapify(n, finalLargest);
+        }
+    }
+
+
+    public void shellSort() {
+        play = true;
+        disable(true);
+        currentThread = new Thread(() -> {
+            int n = recs.length;
+            int[] gap = {n / 2};
+
+            while (gap[0] > 0) {
+                if (!play) {
+                    disable(false);
+                    return;
+                }
+                for (int i = gap[0]; i < n; i++) {
+                    int key = (int) recs[i].getHeight();
+                    int j = i;
+                    int finalI = i;
+
+                    Platform.runLater(() -> {
+                        recs[finalI - gap[0]].setFill(selectedBarsColor);
+                        noOfComparisons++;
+                        showCompares.setText("Number of Comparisons:" + noOfComparisons);
+                    });
+                    delay(speed);
+
+                    while (j >= gap[0] && (int) recs[j - gap[0]].getHeight() > key) {
+                        int finalJ = j;
+
+                        latch = new CountDownLatch(1);
+                        Platform.runLater(() -> {
+                            recs[finalJ].setFill(swapAnmColor);
+                            recs[finalJ - gap[0]].setFill(swapAnmColor);
+                            delay(speed);
+                            ParallelTransition parel = swapAnm(recs[finalJ], recs[finalJ - gap[0]]);
+                            Rectangle temp = recs[finalJ];
+                            recs[finalJ] = recs[finalJ - gap[0]];
+                            recs[finalJ - gap[0]] = temp;
+                            parel.play();
+                            showReplacments.setText("Number of Position Changes:" + (++noOfReplacments));
+                            parel.setOnFinished(e -> latch.countDown());
+                        });
+
+                        try {
+                            latch.await();
+                        } catch (InterruptedException ignored) {
+                        }
+
+                        delay(speed);
+                        Platform.runLater(() -> {
+                            recs[finalJ].setFill(barsMainColor);
+                            recs[finalJ - gap[0]].setFill(barsMainColor);
+                        });
+
+                        j -= gap[0];
+                    }
+
+                    Platform.runLater(() -> {
+                        recs[finalI].setFill(barsMainColor);
+                    });
+                }
+
+                gap[0] /= 2; // gap değerini güncelliyoruz
+            }
+
+            // Mark all bars as sorted
+            for (int i = 0; i < recs.length; i++) {
+                final int finalI = i;
+                Platform.runLater(() -> {
+                    recs[finalI].setFill(barsSortedColor);
+                });
+                delay(5);
+            }
+
+            disable(false);
+        });
+
         currentThread.start();
     }
 }
